@@ -18,7 +18,7 @@ def get_project_type(project):
     name = project['name'].strip()
     if project['name'] == 'Inbox':
         return INBOX_HANDLING
-    elif name[-1] == '=':
+    elif name[-1] == '/':
         return 'parallel'
     elif name[-1] == '-':
         return 'serial'
