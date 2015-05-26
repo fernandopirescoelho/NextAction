@@ -110,14 +110,14 @@ class Item(object):
             state.merge(temp_state)
 
     def IsSequential(self):
-        return not self.content.endswith('=')
+        return not self.content.endswith('/')
         # if self.content.endswith('--') or self.content.endswith('='):
         #  return self.content.endswith('--')
         #else:
         #  return self.parent.IsSequential()
 
     def IsParallel(self):
-        return self.content.endswith('=')
+        return self.content.endswith('/')
         # if self.content.endswith('--') or self.content.endswith('='):
         #  return self.content.endswith('=')
         #else:
